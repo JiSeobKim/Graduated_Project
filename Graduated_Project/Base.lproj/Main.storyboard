@@ -19,7 +19,14 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="u1C-fO-cbQ"/>
+                    <navigationItem key="navigationItem" id="u1C-fO-cbQ">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="Group" id="faO-Lc-gxs"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="aXY-T1-xgs">
+                            <connections>
+                                <action selector="Add:" destination="BYZ-38-t0r" id="b8x-8D-gt9"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -38,15 +45,24 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h0M-x9-gQt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1157.5999999999999" y="33.733133433283363"/>
+            <point key="canvasLocation" x="1349" y="32"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Report-->
         <scene sceneID="Obn-K7-d4I">
             <objects>
-                <viewController id="N63-61-Rl5" customClass="ViewController" customModule="Graduated_Project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddReport" id="N63-61-Rl5" customClass="AddReport" customModule="Graduated_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wNW-m0-Fad">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b1h-QT-nnf">
+                                <rect key="frame" x="186" y="287" width="8" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="bKC-Xh-Iaw"/>
                     </view>
@@ -55,13 +71,22 @@
             </objects>
             <point key="canvasLocation" x="-482" y="778"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Member-->
         <scene sceneID="ado-Ja-c1C">
             <objects>
-                <viewController id="p7W-fW-sb5" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddMember" id="p7W-fW-sb5" customClass="AddMember" customModule="Graduated_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Jzg-7D-f4B">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DDO-ny-PUB">
+                                <rect key="frame" x="186" y="302" width="10" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="zCD-nm-CI1"/>
                     </view>
@@ -91,17 +116,26 @@
         <!--View Controller-->
         <scene sceneID="seQ-GY-Rel">
             <objects>
-                <viewController id="ade-qy-Fgp" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddPart" id="ade-qy-Fgp" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6VB-1K-Drk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5vR-L5-T4r">
+                                <rect key="frame" x="186" y="258" width="11" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="9yS-ZY-rlU"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X7r-Bc-tdt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1158" y="778"/>
+            <point key="canvasLocation" x="1351" y="776"/>
         </scene>
         <!--Main Log-->
         <scene sceneID="SCK-PT-ndh">
@@ -136,4 +170,7 @@
             <point key="canvasLocation" x="-110" y="-852"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Group" width="32" height="32"/>
+    </resources>
 </document>

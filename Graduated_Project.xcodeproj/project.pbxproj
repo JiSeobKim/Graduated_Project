@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		A01B40561F7A6FDA00C5F029 /* Function.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01B40551F7A6FDA00C5F029 /* Function.swift */; };
+		A01B40591F7A760E00C5F029 /* AddReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01B40581F7A760E00C5F029 /* AddReport.swift */; };
+		A01B405B1F7A762000C5F029 /* AddMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01B405A1F7A762000C5F029 /* AddMember.swift */; };
+		A01B405D1F7A762700C5F029 /* AddPart.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01B405C1F7A762700C5F029 /* AddPart.swift */; };
 		A0D9E3FE1F7A4D51000C7208 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D9E3FD1F7A4D51000C7208 /* AppDelegate.swift */; };
 		A0D9E4001F7A4D51000C7208 /* SwitchMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D9E3FF1F7A4D51000C7208 /* SwitchMain.swift */; };
 		A0D9E4031F7A4D51000C7208 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0D9E4011F7A4D51000C7208 /* Main.storyboard */; };
@@ -21,6 +24,9 @@
 
 /* Begin PBXFileReference section */
 		A01B40551F7A6FDA00C5F029 /* Function.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Function.swift; sourceTree = "<group>"; };
+		A01B40581F7A760E00C5F029 /* AddReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReport.swift; sourceTree = "<group>"; };
+		A01B405A1F7A762000C5F029 /* AddMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMember.swift; sourceTree = "<group>"; };
+		A01B405C1F7A762700C5F029 /* AddPart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPart.swift; sourceTree = "<group>"; };
 		A0D9E3FA1F7A4D51000C7208 /* Graduated_Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Graduated_Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0D9E3FD1F7A4D51000C7208 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A0D9E3FF1F7A4D51000C7208 /* SwitchMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchMain.swift; sourceTree = "<group>"; };
@@ -48,6 +54,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A01B40571F7A760300C5F029 /* Add */ = {
+			isa = PBXGroup;
+			children = (
+				A01B40581F7A760E00C5F029 /* AddReport.swift */,
+				A01B405A1F7A762000C5F029 /* AddMember.swift */,
+				A01B405C1F7A762700C5F029 /* AddPart.swift */,
+			);
+			path = Add;
+			sourceTree = "<group>";
+		};
 		A0D9E3F11F7A4D51000C7208 = {
 			isa = PBXGroup;
 			children = (
@@ -69,6 +85,7 @@
 		A0D9E3FC1F7A4D51000C7208 /* Graduated_Project */ = {
 			isa = PBXGroup;
 			children = (
+				A01B40571F7A760300C5F029 /* Add */,
 				A0D9E4121F7A6B08000C7208 /* Main */,
 				A0D9E3FD1F7A4D51000C7208 /* AppDelegate.swift */,
 				A0D9E3FF1F7A4D51000C7208 /* SwitchMain.swift */,
@@ -246,8 +263,11 @@
 				A0D9E4061F7A4D51000C7208 /* Graduated_Project.xcdatamodeld in Sources */,
 				A0D9E4141F7A6B26000C7208 /* MainRecent.swift in Sources */,
 				A0D9E4001F7A4D51000C7208 /* SwitchMain.swift in Sources */,
+				A01B405B1F7A762000C5F029 /* AddMember.swift in Sources */,
 				A01B40561F7A6FDA00C5F029 /* Function.swift in Sources */,
 				A0D9E3FE1F7A4D51000C7208 /* AppDelegate.swift in Sources */,
+				A01B40591F7A760E00C5F029 /* AddReport.swift in Sources */,
+				A01B405D1F7A762700C5F029 /* AddPart.swift in Sources */,
 				A0D9E4161F7A6B3C000C7208 /* MainLog.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
