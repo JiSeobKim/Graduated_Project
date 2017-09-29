@@ -32,6 +32,13 @@ class SwitchMain: UIPageViewController, UIPageViewControllerDataSource, UIPageVi
     @IBAction func Add(_ sender: UIBarButtonItem) {
         let alert = UIAlertController(title: "정보 추가", message: "추가 할 정보를 선택해 주세요", preferredStyle: .actionSheet)
         
+        let addMaster = UIAlertAction(title: "마스터 수정", style: .default) {
+            (_) in
+            if let goMaster = self.storyboard?.instantiateViewController(withIdentifier: "AddMaster") {
+                self.navigationController?.pushViewController(goMaster, animated: true)
+            }
+        }
+        
         let addReport = UIAlertAction(title: "보고서 작성", style: .default) {
             (_) in
             if let goReport = self.storyboard?.instantiateViewController(withIdentifier: "AddReport") {
@@ -46,18 +53,13 @@ class SwitchMain: UIPageViewController, UIPageViewControllerDataSource, UIPageVi
             }
         }
         
-        let addPart = UIAlertAction(title: "파트 추가", style: .default) {
-            (_) in
-            if let goPart = self.storyboard?.instantiateViewController(withIdentifier: "AddPart") {
-                self.navigationController?.pushViewController(goPart, animated: true)
-            }
-        }
+        
         
         let cancel = UIAlertAction(title: "취소", style: .cancel)
         
+        alert.addAction(addMaster)
         alert.addAction(addReport)
         alert.addAction(addMember)
-        alert.addAction(addPart)
         alert.addAction(cancel)
         
         self.present(alert, animated:true)

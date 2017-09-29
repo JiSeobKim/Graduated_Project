@@ -16,6 +16,12 @@ class ShowMember: UICollectionViewController {
     var nameArray : [String] = []
     var URL = "http://222.107.27.68:5123/swift/graduate/getMember.php"
     var test = true
+    
+    override func viewWillAppear(_ animated: Bool) {
+        collectionView?.reloadData()
+    }
+    
+    
     override func viewDidLoad() {
         Alamofire.request(URL).responseJSON { (response) in
             switch response.result {
@@ -66,10 +72,9 @@ class ShowMember: UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let item = memberObject[indexPath.row]
-        if test == true {
-            performSegue(withIdentifier: "MemberInfo", sender: item)
-            test = false
-        }
+        performSegue(withIdentifier: "MemberInfo", sender: item)
+        
+        
         
     }
     

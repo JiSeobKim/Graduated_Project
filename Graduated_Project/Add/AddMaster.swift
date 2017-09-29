@@ -9,6 +9,6 @@
 import Foundation
 import UIKit
 
-class AddPart: UIViewController {
+class MasterPart: UIViewController {
     
 }

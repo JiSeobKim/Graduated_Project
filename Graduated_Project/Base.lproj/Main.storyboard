@@ -49,11 +49,11 @@
                             <size key="itemSize" width="100" height="100"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <inset key="sectionInset" minX="12" minY="12" maxX="8" maxY="12"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MemberCell" id="joc-T3-O4d" customClass="ShowMemberCell" customModule="Graduated_Project" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                <rect key="frame" x="12" y="12" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                     <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
@@ -100,7 +100,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AWN-O9-bGs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1437.68115942029" y="44.836956521739133"/>
+            <point key="canvasLocation" x="1351" y="33"/>
         </scene>
         <!--정보-->
         <scene sceneID="XdO-nN-sIZ">
@@ -158,25 +158,25 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y6z-7W-EG7">
                                                 <rect key="frame" x="0.0" y="0.0" width="200.00000000000003" height="20.333333333333314"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" red="0.57022481477322362" green="0.57022481477322362" blue="0.57022481477322362" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="textColor" red="0.47125298834835316" green="0.47125298834835316" blue="0.47125298834835316" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Hr-0b-w3v">
                                                 <rect key="frame" x="0.0" y="98.333333333333343" width="200.00000000000003" height="20.333333333333314"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" red="0.57022481477322362" green="0.57022481477322362" blue="0.57022481477322362" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="textColor" red="0.47125298834835316" green="0.47125298834835316" blue="0.47125298834835316" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Xn-OS-hMu">
                                                 <rect key="frame" x="0.0" y="196.66666666666666" width="200.00000000000003" height="20.333333333333314"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" red="0.57022481477322362" green="0.57022481477322362" blue="0.57022481477322362" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="textColor" red="0.47125298834835316" green="0.47125298834835316" blue="0.47125298834835316" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="79A-A9-Z7b">
                                                 <rect key="frame" x="0.0" y="295" width="200.00000000000003" height="20.333333333333314"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" red="0.57022481477322362" green="0.57022481477322362" blue="0.57022481477322362" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="textColor" red="0.47125298834835316" green="0.47125298834835316" blue="0.47125298834835316" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -215,7 +215,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Neb-uf-O1I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2222" y="45"/>
+            <point key="canvasLocation" x="2180" y="32"/>
         </scene>
         <!--보고서 작성-->
         <scene sceneID="Obn-K7-d4I">
@@ -227,7 +227,9 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="bKC-Xh-Iaw"/>
                     </view>
-                    <navigationItem key="navigationItem" title="보고서 작성" id="yjV-kh-dup"/>
+                    <navigationItem key="navigationItem" title="보고서 작성" id="yjV-kh-dup">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="oPy-5g-Q8W"/>
+                    </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y5B-pK-U9U" sceneMemberID="firstResponder"/>
@@ -434,17 +436,19 @@
             </objects>
             <point key="canvasLocation" x="-482" y="34"/>
         </scene>
-        <!--파트 추가-->
+        <!--마스터 수정-->
         <scene sceneID="seQ-GY-Rel">
             <objects>
-                <viewController storyboardIdentifier="AddPart" id="ade-qy-Fgp" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddMaster" id="ade-qy-Fgp" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6VB-1K-Drk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="9yS-ZY-rlU"/>
                     </view>
-                    <navigationItem key="navigationItem" title="파트 추가" id="axJ-Qg-WK2"/>
+                    <navigationItem key="navigationItem" title="마스터 수정" id="axJ-Qg-WK2">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="T1K-c5-2AX"/>
+                    </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X7r-Bc-tdt" userLabel="First Responder" sceneMemberID="firstResponder"/>
