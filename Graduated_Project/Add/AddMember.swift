@@ -26,11 +26,15 @@ class AddMember: UIViewController {
     
     @IBAction func buttonRegist(_ sender: Any) {
         //creating parameters for the post request
+        labelStatus.text = ""
+        if textFieldCoin.text == "" {
+            textFieldCoin.text = "0"
+        }
         let parameters: Parameters=[
             "name":textFieldName.text!,
             "email":textFieldEmail.text!,
             "phone":textFieldPhone.text!,
-            "coin":textFieldName.text!,
+            "coin":textFieldCoin.text!,
             ]
         
         
