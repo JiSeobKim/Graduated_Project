@@ -15,3 +15,12 @@ struct Member_Info : Decodable {
     var phone : String
     var coin : String
 }
+
+struct to_do : Decodable{
+    var name : String
+    var coinChange : Int
+    var description : String
+    var date : Date
+}
+
+

@@ -31,11 +31,11 @@ class ShowMember: UICollectionViewController {
                 // Add object into memberObject[Member_Info]
                 
                 for row in dataArray {
-                    let nameDic = row as! NSDictionary
+                    let objToDic = row as! NSDictionary
                     
                     // NS -> JSON -> use decoadable -> append
                     do {
-                        let jsonData = try JSONSerialization.data(withJSONObject: nameDic, options: .prettyPrinted)
+                        let jsonData = try JSONSerialization.data(withJSONObject: objToDic, options: .prettyPrinted)
                         self.memberObject.append(try JSONDecoder().decode(Member_Info.self, from: jsonData))
                     } catch {
                         print(error.localizedDescription)

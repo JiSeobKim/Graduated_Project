@@ -13,7 +13,7 @@ import Alamofire
 class AddMember: UIViewController {
     
     //Nas
-    let URL_USER_REGISTER = "http://222.107.27.68:5123/swift/graduate/register.php"
+    let URL_USER_REGISTER = "http://222.107.27.68:5123/swift/graduate/registerMember.php"
     
     //View variables
     @IBOutlet weak var textFieldName: UITextField!
