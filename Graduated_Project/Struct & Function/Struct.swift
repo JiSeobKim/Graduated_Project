@@ -9,18 +9,18 @@
 import Foundation
 
 
-struct Member_Info : Decodable {
+struct Member_Info : Codable {
     var name : String
     var email : String
     var phone : String
     var coin : String
 }
 
-struct to_do : Decodable{
+struct to_do : Codable{
     var name : String
-    var coinChange : Int
     var description : String
-    var date : Date
 }
+
+
 
 

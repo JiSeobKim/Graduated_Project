@@ -96,7 +96,7 @@
 		A0D9E3FC1F7A4D51000C7208 /* Graduated_Project */ = {
 			isa = PBXGroup;
 			children = (
-				A0EFE61D1F7BAE51002099A0 /* Struct */,
+				A0EFE61D1F7BAE51002099A0 /* Struct & Function */,
 				A01B40571F7A760300C5F029 /* Add */,
 				A0D9E4121F7A6B08000C7208 /* View */,
 				A0D9E3FD1F7A4D51000C7208 /* AppDelegate.swift */,
@@ -106,7 +106,6 @@
 				A0D9E4091F7A4D51000C7208 /* LaunchScreen.storyboard */,
 				A0D9E40C1F7A4D51000C7208 /* Info.plist */,
 				A0D9E4041F7A4D51000C7208 /* Graduated_Project.xcdatamodeld */,
-				A01B40551F7A6FDA00C5F029 /* Function.swift */,
 			);
 			path = Graduated_Project;
 			sourceTree = "<group>";
@@ -123,12 +122,13 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		A0EFE61D1F7BAE51002099A0 /* Struct */ = {
+		A0EFE61D1F7BAE51002099A0 /* Struct & Function */ = {
 			isa = PBXGroup;
 			children = (
+				A01B40551F7A6FDA00C5F029 /* Function.swift */,
 				A0EFE61E1F7BAE6E002099A0 /* Struct.swift */,
 			);
-			path = Struct;
+			path = "Struct & Function";
 			sourceTree = "<group>";
 		};
 		AAF917EC7D273C44989B3D84 /* Frameworks */ = {

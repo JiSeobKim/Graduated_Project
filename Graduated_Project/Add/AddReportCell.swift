@@ -15,11 +15,15 @@ class AddReportCommonCell : UITableViewCell {
     
 }
 
+
 class AddReportPersonalCell : UITableViewCell {
     @IBOutlet weak var personalTextField: UITextField!
     @IBOutlet weak var coinSubPersonal: UISwitch!
     @IBOutlet weak var name: UILabel!
+
+   
     
+  
     
     
 }
