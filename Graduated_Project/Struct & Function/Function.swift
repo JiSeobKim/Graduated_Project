@@ -14,21 +14,28 @@ protocol stringData {
     func updateArray(data : String)
 }
 
-
-extension UIViewController{
+//완료시 알림창
+func alertDalay(viewControl : UIViewController, message : String ){
     
-    func hideKeyboardWhenTappedAround() {
+    let alert = UIAlertController(title: "", message: message, preferredStyle: .alert)
+    
+    //폭 조절
+    let widthConstraint:NSLayoutConstraint = NSLayoutConstraint(item: alert.view.subviews[0], attribute:
+        NSLayoutAttribute.width, relatedBy: NSLayoutRelation.equal, toItem: nil, attribute: NSLayoutAttribute.notAnAttribute, multiplier: 1, constant: 140.0)
+    
+    alert.view.addConstraint(widthConstraint)
+    viewControl.present(alert, animated: true, completion: nil)
+    
+    let when = DispatchTime.now() + 1
+    DispatchQueue.main.asyncAfter(deadline: when) {
+        alert.dismiss(animated: true, completion: {
+            viewControl.navigationController?.popViewController(animated: true)
+        })
         
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
-        view.addGestureRecognizer(tap)
         
     }
-    @objc func dismissKeyboard() {
-        view.endEditing(true)
-    }
-//    func moveFrame(){
-//        NotificationCenter.default.addObserver(self, selector: #selector(UIViewController.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-//        
-//        NotificationCenter.default.addObserver(self, selector: #selector(UIViewController.keyboardWillHide), name: Notification.Name.UIKeyboardWillHide, object: nil)
-//    }
+    
+    
+    
+    
 }
