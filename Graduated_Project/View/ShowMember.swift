@@ -14,8 +14,7 @@ class ShowMember: UICollectionViewController {
     
     var memberObject : [Member_Info] = []
     var nameArray : [String] = []
-    var URL = "http://222.107.27.68:5123/swift/graduate/getMember.php"
-    var test = true
+    
     
     override func viewWillAppear(_ animated: Bool) {
         collectionView?.reloadData()
@@ -23,9 +22,10 @@ class ShowMember: UICollectionViewController {
     
     
     override func viewDidLoad() {
-        Alamofire.request(URL).responseJSON { (response) in
+        Alamofire.request(URL_GET_MEMBER).responseJSON { (response) in
             switch response.result {
             case .success(let data):
+                print(data)
                 
                 let dataArray = data as! NSArray
                 // Add object into memberObject[Member_Info]
@@ -49,6 +49,7 @@ class ShowMember: UICollectionViewController {
                 
             case .failure(let e):
                 print(e.localizedDescription)
+                print("line:52")
             }
         } // end Alamofire
     }

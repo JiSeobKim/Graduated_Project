@@ -32,7 +32,7 @@ class SwitchMain: UIPageViewController, UIPageViewControllerDataSource, UIPageVi
     @IBAction func Add(_ sender: UIBarButtonItem) {
         let alert = UIAlertController(title: "정보 추가", message: "추가 할 정보를 선택해 주세요", preferredStyle: .actionSheet)
         
-        let addMaster = UIAlertAction(title: "마스터 수정", style: .default) {
+        let addMaster = UIAlertAction(title: "스터디 수정", style: .default) {
             (_) in
             if let goMaster = self.storyboard?.instantiateViewController(withIdentifier: "AddMaster") {
                 self.navigationController?.pushViewController(goMaster, animated: true)

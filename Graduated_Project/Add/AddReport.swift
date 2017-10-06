@@ -18,12 +18,7 @@ class AddReport: UITableViewController, UITextFieldDelegate {
     var nameData = [String]()
     var textData = [String]()
     
-    //Nas 주소
-    let URL_REPORT_REGISTER = "http://222.107.27.68:5123/swift/graduate/registerReport.php"
-    
-    
-    
-    
+
     //Save 버튼
     @IBAction func saveBtn(_ sender: Any) {
         self.view.endEditing(true)
@@ -38,22 +33,8 @@ class AddReport: UITableViewController, UITextFieldDelegate {
                 "name" : nameData,
                 "text" : textData
             ]
-            Alamofire.request(URL_REPORT_REGISTER, method: .post, parameters : params).responseJSON { (jsonData) in
-                switch jsonData.result {
-                case .success(let data):
-                    let dataString = data as! String
-                    if dataString == "Success!!" {
-                        alertDalay(viewControl: self, message: "저장되었어요")
-                    } else if dataString == "Already exist"{
-                        alertDalay(viewControl: self, message: "이미 존재해요")
-                    } else {
-                        alertDalay(viewControl: self, message: "에러 발생!")
-                    }
-                case .failure(let e):
-                    print(e.localizedDescription)
-                    
-                }
-            }
+            postAlamofire(URL: URL_REPORT_REGISTER, params: params, VC: self)
+
             
         }
         
@@ -69,11 +50,11 @@ class AddReport: UITableViewController, UITextFieldDelegate {
     
    
     
-    var URL = "http://222.107.27.68:5123/swift/graduate/getMember.php"
+    
 
     //값 불러오기
     override func viewDidLoad() {
-        Alamofire.request(URL).responseJSON { (response) in
+        Alamofire.request(URL_GET_MEMBER).responseJSON { (response) in
             switch response.result {
             case .success(let data):
 

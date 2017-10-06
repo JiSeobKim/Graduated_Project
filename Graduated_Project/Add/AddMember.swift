@@ -10,10 +10,10 @@ import Foundation
 import UIKit
 import Alamofire
 
+
+
 class AddMember: UIViewController {
     
-    //Nas
-    let URL_USER_REGISTER = "http://222.107.27.68:5123/swift/graduate/registerMember.php"
     
     //View variables
     @IBOutlet weak var textFieldName: UITextField!
@@ -39,7 +39,7 @@ class AddMember: UIViewController {
         
         
         //Sending http post request
-        Alamofire.request(URL_USER_REGISTER, method: .post, parameters: parameters , encoding: URLEncoding.httpBody).responseJSON
+        Alamofire.request(URL_USER_STUDY_REGISTER, method: .post, parameters: parameters , encoding: URLEncoding.httpBody).responseJSON
             {
                 response in
                 //getting the json value from the server
@@ -51,12 +51,7 @@ class AddMember: UIViewController {
                 }
         }
     }
-    //Button action
-    @IBAction func buttonRegister(_ sender: UIButton) {
-        
-        
-        
-    }
+
     
     
 }

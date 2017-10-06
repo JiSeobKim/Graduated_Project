@@ -8,11 +8,15 @@
 
 import Foundation
 import UIKit
+import Alamofire
 let ad = UIApplication.shared.delegate as! AppDelegate
 
-protocol stringData {
-    func updateArray(data : String)
-}
+//List of URL
+let URL_USER_STUDY_REGISTER = "http://222.107.27.68:5123/swift/graduate/regist_Member_Study.php"
+let URL_REPORT_REGISTER = "http://222.107.27.68:5123/swift/graduate/registerReport.php"
+let URL_GET_MEMBER = "http://222.107.27.68:5123/swift/graduate/get_Member.php"
+let URL_GET_STUDYINFO = "http://222.107.27.68:5123/swift/graduate/get_StudyInfo.php"
+
 
 //완료시 알림창
 func alertDalay(viewControl : UIViewController, message : String ){
@@ -37,5 +41,23 @@ func alertDalay(viewControl : UIViewController, message : String ){
     
     
     
+    
+}
+func postAlamofire(URL : String, params:Parameters, VC : UIViewController) {
+    
+    Alamofire.request(URL, method: .post, parameters : params).responseJSON { (jsonData) in
+        switch jsonData.result {
+        case .success(let data):
+            let dataDic = data as! NSDictionary
+            let dataString = dataDic["message"] as! String
+            
+            alertDalay(viewControl: VC, message: dataString)
+            
+        case .failure(let e):
+            print(e.localizedDescription)
+            print("Here")
+            
+        }
+    }
     
 }
