@@ -39,6 +39,10 @@ class DefineStudy: UIViewController {
     }
     
     override func viewDidLoad() {
+        addInputAccessoryForTextFields(textFields: [textFieldName, textFieldGoal, textFieldPeriod], dismissable: true, previousNextable: true)
+        
+        
+        //통신
         Alamofire.request(URL_GET_STUDYINFO).responseJSON { (response) in
             switch response.result{
             case .success(let data):
@@ -52,7 +56,7 @@ class DefineStudy: UIViewController {
                     self.textFieldGoal.text = data["goal"] as? String
                     self.textFieldPeriod.text = data["period"] as? String
                 } else {
-                    print("Is Empoty")
+                    print("Is Empty")
                 }
                 
                 
@@ -61,10 +65,29 @@ class DefineStudy: UIViewController {
                 
             }
         }
+    }
+    
+    
+    @IBAction func forDataPicker(_ sender: UITextField) {
+        upViewForKeyboard(how: 70 , VC:self)
         
+        let datePicker: UIDatePicker = UIDatePicker()
+        datePicker.backgroundColor = UIColor(white: 0.5, alpha: 0.8)
+        datePicker.setValue(UIColor.white, forKey: "textColor")
+        datePicker.datePickerMode = .date
+        sender.inputView = datePicker
+        datePicker.addTarget(self, action: #selector(DefineStudy.datePickerValueChanged), for: UIControlEvents.valueChanged)
         
-        
-        
+    }
+    @IBAction func forDatePickerEnd(_ sender: UITextField) {
+        downViewForKeyboard(how: 70, VC:self)
+    }
+    
+    //타겟시 데이트피커의 값을 텍스트 필드에 넣어주기 위한 펑션
+    @objc func datePickerValueChanged(sender: UIDatePicker) {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        textFieldPeriod.text = dateFormatter.string(from: sender.date)
     }
     
     

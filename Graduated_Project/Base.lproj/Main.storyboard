@@ -471,12 +471,20 @@
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                                <connections>
+                                                    <action selector="emailEditBegin:" destination="p7W-fW-sb5" eventType="editingDidBegin" id="8Jp-Yn-Z9g"/>
+                                                    <action selector="emailEditEnd:" destination="p7W-fW-sb5" eventType="editingDidEnd" id="7Bh-eT-CzO"/>
+                                                </connections>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="미입력시 0원" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="95N-uQ-Yje">
                                                 <rect key="frame" x="0.0" y="270" width="200" height="28.999999999999943"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                <connections>
+                                                    <action selector="coinEditBegin:" destination="p7W-fW-sb5" eventType="editingDidBegin" id="W8D-3q-RwR"/>
+                                                    <action selector="coinEditEnd:" destination="p7W-fW-sb5" eventType="editingDidEnd" id="7g9-nS-Dv3"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                         <constraints>
@@ -573,6 +581,10 @@
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="forDataPicker:" destination="ade-qy-Fgp" eventType="editingDidBegin" id="nV4-tZ-pvH"/>
+                                            <action selector="forDatePickerEnd:" destination="ade-qy-Fgp" eventType="editingDidEnd" id="eyx-CP-d5T"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                                 <constraints>
