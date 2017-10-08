@@ -21,6 +21,16 @@ struct to_do : Codable{
     var description : String
 }
 
+struct CommonToDo : Codable {
+    var name : String
+    var description : String
+    var date : String
+    
+    
+}
+
+
+
 
 
 

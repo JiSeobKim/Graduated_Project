@@ -16,6 +16,7 @@ let URL_USER_STUDY_REGISTER = "http://222.107.27.68:5123/swift/graduate/regist_M
 let URL_REPORT_REGISTER = "http://222.107.27.68:5123/swift/graduate/registerReport.php"
 let URL_GET_MEMBER = "http://222.107.27.68:5123/swift/graduate/get_Member.php"
 let URL_GET_STUDYINFO = "http://222.107.27.68:5123/swift/graduate/get_StudyInfo.php"
+let URL_GET_LOG = "http://222.107.27.68:5123/swift/graduate/get_Log.php"
 
 
 //완료시 알림창
@@ -43,6 +44,7 @@ func alertDalay(viewControl : UIViewController, message : String ){
     
     
 }
+
 func postAlamofire(URL : String, params:Parameters, VC : UIViewController) {
     
     Alamofire.request(URL, method: .post, parameters : params).responseJSON { (jsonData) in

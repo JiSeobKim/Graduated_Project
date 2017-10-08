@@ -73,7 +73,7 @@ class SwitchMain: UIPageViewController, UIPageViewControllerDataSource, UIPageVi
     ///////////PageView 관련
     
     //VC 배열
-    lazy var VCArr: [ UIViewController] = {
+    lazy var VCArr: [ UIViewController ] = {
         return [self.VCInstance(name: "MainRecent"), self.VCInstance(name: "MainLog")]
     }()
     
