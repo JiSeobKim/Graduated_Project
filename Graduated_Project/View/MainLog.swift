@@ -57,7 +57,6 @@ class MainLog : UITableViewController {
         if segue.identifier == "LogDetail" {
             if let destination = segue.destination as? MainLogDetail {
                 if let data = sender as? ToDoInfo{
-                    print(data.name)
                     destination.getCommonData = data
                 }
                 
