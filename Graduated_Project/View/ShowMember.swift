@@ -12,7 +12,7 @@ import Alamofire
 
 class ShowMember: UICollectionViewController {
     
-    var memberObject : [Member_Info] = []
+    var memberObject : [MemberInfo] = []
     var nameArray : [String] = []
     
     
@@ -27,7 +27,7 @@ class ShowMember: UICollectionViewController {
             case .success(let data):
                 
                 let dataArray = data as! NSArray
-                // Add object into memberObject[Member_Info]
+                // Add object into memberObject[MemberInfo]
                 
                 for row in dataArray {
                     let objToDic = row as! NSDictionary
@@ -35,7 +35,7 @@ class ShowMember: UICollectionViewController {
                     // NS -> JSON -> use decoadable -> append
                     do {
                         let jsonData = try JSONSerialization.data(withJSONObject: objToDic, options: .prettyPrinted)
-                        self.memberObject.append(try JSONDecoder().decode(Member_Info.self, from: jsonData))
+                        self.memberObject.append(try JSONDecoder().decode(MemberInfo.self, from: jsonData))
                     } catch {
                         print(error.localizedDescription)
                     }
@@ -81,7 +81,7 @@ class ShowMember: UICollectionViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "MemberInfo" {
             if let destination = segue.destination as? ShowMemberInfo{
-                if let memberStr = sender as? Member_Info{
+                if let memberStr = sender as? MemberInfo{
                     destination.getValue = memberStr
                 }
             }
