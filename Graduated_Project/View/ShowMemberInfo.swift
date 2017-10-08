@@ -12,7 +12,7 @@ import UIKit
 
 class ShowMemberInfo : UIViewController {
     
-    var getValue : Member_Info?
+    var getValue : MemberInfo?
     
     
     @IBOutlet weak var labelName: UILabel!

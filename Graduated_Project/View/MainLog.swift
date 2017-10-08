@@ -13,8 +13,12 @@ import Alamofire
 class MainLog : UITableViewController {
     
     
-    var dataArray = [CommonToDo]()
+    var dataArray = [ToDoInfo]()
+
     
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.reloadData()
+    }
     
     override func viewDidLoad() {
         
@@ -27,14 +31,14 @@ class MainLog : UITableViewController {
                     do {
                         
                         let jsonData = try JSONSerialization.data(withJSONObject: row, options: .prettyPrinted)
-                        self.dataArray.append(try JSONDecoder().decode(CommonToDo.self, from: jsonData))
+                        self.dataArray.append(try JSONDecoder().decode(ToDoInfo.self, from: jsonData))
                         
                     } catch {
                         print(error.localizedDescription)
                     }
                 }
                 
-                print(self.dataArray.count)
+                
                 self.tableView.reloadData()
             case . failure(let error):
                 print(error.localizedDescription)
@@ -44,8 +48,34 @@ class MainLog : UITableViewController {
         
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let item = dataArray[indexPath.row]
+        performSegue(withIdentifier: "LogDetail", sender: item)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "LogDetail" {
+            if let destination = segue.destination as? MainLogDetail {
+                if let data = sender as? ToDoInfo{
+                    print(data.name)
+                    destination.getCommonData = data
+                }
+                
+            }
+        }
+    }
     
     
+    
+    
+    
+//LogDetail
+    
+    
+
+}
+
+extension MainLog {
     
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -57,12 +87,8 @@ class MainLog : UITableViewController {
         
         cell.labelDate.text = dataArray[indexPath.row].date
         cell.labelDescription.text = dataArray[indexPath.row].description
-
+        
         return cell
     }
     
-    
-    
-    
-
 }

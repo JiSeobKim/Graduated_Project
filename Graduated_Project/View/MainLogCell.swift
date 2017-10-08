@@ -17,3 +17,10 @@ class MainLogCell : UITableViewCell {
     
     
 }
+
+
+class MainLogDetailCell : UITableViewCell {
+    @IBOutlet weak var labelName: UILabel!
+    @IBOutlet weak var labelDescription: UILabel!
+    
+}

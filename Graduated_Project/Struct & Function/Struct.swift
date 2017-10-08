@@ -9,23 +9,18 @@
 import Foundation
 
 
-struct Member_Info : Codable {
+struct MemberInfo : Codable {
     var name : String
     var email : String
     var phone : String
     var coin : String
 }
 
-struct to_do : Codable{
-    var name : String
-    var description : String
-}
 
-struct CommonToDo : Codable {
+struct ToDoInfo : Codable {
     var name : String
     var description : String
     var date : String
-    
     
 }
 
