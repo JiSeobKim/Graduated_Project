@@ -64,3 +64,5 @@ func postAlamofire(URL : String, params:Parameters, VC : UIViewController) {
     }
     
 }
+
+
