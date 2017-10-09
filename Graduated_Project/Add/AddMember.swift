@@ -23,7 +23,7 @@ class AddMember: UIViewController {
     @IBOutlet weak var labelStatus: UILabel!
     
     override func viewDidLoad() {
-        addInputAccessoryForTextFields(textFields: [textFieldName, textFieldEmail, textFieldPhone,textFieldCoin], dismissable: true, previousNextable: true)
+        addInputAccessoryForTextFields(textFields: [textFieldName, textFieldPhone, textFieldEmail, textFieldCoin], dismissable: true, previousNextable: true)
     }
     
     //키보드 입력시 뷰 이동
@@ -56,19 +56,9 @@ class AddMember: UIViewController {
             "coin":textFieldCoin.text!,
             ]
         
-        
         //Sending http post request
-        Alamofire.request(URL_USER_STUDY_REGISTER, method: .post, parameters: parameters , encoding: URLEncoding.httpBody).responseJSON
-            {
-                response in
-                //getting the json value from the server
-                if let result = response.result.value {
-                    
-                    let jsonData = result as! NSDictionary
-                    self.labelStatus.text = "상태 : \(jsonData["message"] as! String)"
-                    
-                }
-        }
+        postAlamofire(URL: URL_USER_STUDY_REGISTER, params: parameters, VC: self)
+        
     }
 
     
