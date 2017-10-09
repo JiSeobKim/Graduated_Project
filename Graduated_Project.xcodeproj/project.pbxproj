@@ -12,6 +12,7 @@
 		A01B405B1F7A762000C5F029 /* AddMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01B405A1F7A762000C5F029 /* AddMember.swift */; };
 		A01B405D1F7A762700C5F029 /* DefineStudy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01B405C1F7A762700C5F029 /* DefineStudy.swift */; };
 		A069404A1F87733B00E2FC3B /* KeyBoard_Tool.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06940491F87733B00E2FC3B /* KeyBoard_Tool.swift */; };
+		A08947571F8B26A700B06A3D /* CustomSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08947561F8B26A600B06A3D /* CustomSegment.swift */; };
 		A0ADA37F1F8A3A6300050C6E /* MainLogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0ADA37E1F8A3A6300050C6E /* MainLogCell.swift */; };
 		A0ADA3811F8A6CA400050C6E /* MainLogDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0ADA3801F8A6CA400050C6E /* MainLogDetail.swift */; };
 		A0D9E3FE1F7A4D51000C7208 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D9E3FD1F7A4D51000C7208 /* AppDelegate.swift */; };
@@ -36,6 +37,7 @@
 		A01B405A1F7A762000C5F029 /* AddMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMember.swift; sourceTree = "<group>"; };
 		A01B405C1F7A762700C5F029 /* DefineStudy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefineStudy.swift; sourceTree = "<group>"; };
 		A06940491F87733B00E2FC3B /* KeyBoard_Tool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyBoard_Tool.swift; sourceTree = "<group>"; };
+		A08947561F8B26A600B06A3D /* CustomSegment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegment.swift; sourceTree = "<group>"; };
 		A0ADA37E1F8A3A6300050C6E /* MainLogCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainLogCell.swift; sourceTree = "<group>"; };
 		A0ADA3801F8A6CA400050C6E /* MainLogDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainLogDetail.swift; sourceTree = "<group>"; };
 		A0D9E3FA1F7A4D51000C7208 /* Graduated_Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Graduated_Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -107,6 +109,7 @@
 				A0D9E4121F7A6B08000C7208 /* View */,
 				A0D9E3FD1F7A4D51000C7208 /* AppDelegate.swift */,
 				A0D9E3FF1F7A4D51000C7208 /* SwitchMain.swift */,
+				A08947561F8B26A600B06A3D /* CustomSegment.swift */,
 				A0D9E4011F7A4D51000C7208 /* Main.storyboard */,
 				A0D9E4071F7A4D51000C7208 /* Assets.xcassets */,
 				A0D9E4091F7A4D51000C7208 /* LaunchScreen.storyboard */,
@@ -294,6 +297,7 @@
 			files = (
 				A0D9E4061F7A4D51000C7208 /* Graduated_Project.xcdatamodeld in Sources */,
 				A0D9E4141F7A6B26000C7208 /* MainRecent.swift in Sources */,
+				A08947571F8B26A700B06A3D /* CustomSegment.swift in Sources */,
 				A0EFE61C1F7BAD2B002099A0 /* ShowMember.swift in Sources */,
 				A0ADA37F1F8A3A6300050C6E /* MainLogCell.swift in Sources */,
 				A0D9E4001F7A4D51000C7208 /* SwitchMain.swift in Sources */,

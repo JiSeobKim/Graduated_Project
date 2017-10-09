@@ -8,22 +8,26 @@
 
 import UIKit
 
-class SwitchMain: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
+class SwitchMain: UIViewController {
     
     
+    @IBOutlet weak var segmentedControl: CustomSegment!
+    @IBOutlet weak var contentView: UIView!
     
+    enum TabIndex : Int {
+        case firstChildTab = 0
+        case secondChildTab = 1
+    }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.dataSource = self
-        self.delegate = self
+        segmentedControl.initUI()
+        segmentedControl.selectedSegmentIndex = TabIndex.firstChildTab.rawValue
+        displayCurrentTab(TabIndex.firstChildTab.rawValue)
+
         self.navigationItem.title = "최근 현황"
-        
-        //첫 화면은 VC1
-        if let firstVC = VCArr.first {
-            setViewControllers([firstVC], direction: .forward, animated: true, completion: nil)
-        }
+
     }
     
     
@@ -64,114 +68,75 @@ class SwitchMain: UIPageViewController, UIPageViewControllerDataSource, UIPageVi
         
         self.present(alert, animated:true)
         
-        //캔슬 추가차례
+        
     }
     
     
+    //Segment
     
+    var currentViewController : UIViewController?
     
-    ///////////PageView 관련
-    
-    //VC 배열
-    lazy var VCArr: [ UIViewController ] = {
-        return [self.VCInstance(name: "MainRecent"), self.VCInstance(name: "MainLog")]
+    lazy var firstChildVC : UIViewController? = {
+        let firstChildVC = self.storyboard?.instantiateViewController(withIdentifier: "MainRecent")
+        return firstChildVC
     }()
     
-    //Main이라는 스토리보드에서 정보 받아오기
-    private func VCInstance(name:String) -> UIViewController {
-        return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: name)
-    }
     
-    //naviTitle
-    var pageIsOne = true
-    func naviTitle() {
-        
-        if pageIsOne == true {
-            self.navigationItem.title = "최근 현황"
-        } else {
-            self.navigationItem.title = "Log"
+    lazy var secondChildVC : UIViewController? = {
+        let firstChildVC = self.storyboard?.instantiateViewController(withIdentifier: "MainLog")
+        return firstChildVC
+    }()
+    
+
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        if let currentViewController = currentViewController {
+            currentViewController.viewWillDisappear(animated)
         }
-        
     }
     
+    // MARK: - Switching Tabs Functions
+    @IBAction func switchTabs(_ sender: UISegmentedControl) {
+        self.currentViewController!.view.removeFromSuperview()
+        self.currentViewController!.removeFromParentViewController()
+        
+        displayCurrentTab(sender.selectedSegmentIndex)
+    }
     
-    // 이전화면 스와이프
-    public func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-        guard let viewControllerIndex = VCArr.index(of: viewController) else {
+    func displayCurrentTab(_ tabIndex: Int){
+        if let vc = viewControllerForSelectedSegmentIndex(tabIndex) {
+            
+            self.addChildViewController(vc)
+            vc.didMove(toParentViewController: self)
+            
+            vc.view.frame = self.contentView.bounds
+            self.contentView.addSubview(vc.view)
+            self.currentViewController = vc
+        }
+    }
+    
+    func viewControllerForSelectedSegmentIndex(_ index: Int) -> UIViewController? {
+        var vc: UIViewController?
+        switch index {
+        case TabIndex.firstChildTab.rawValue :
+            vc = firstChildVC
+        case TabIndex.secondChildTab.rawValue :
+            vc = secondChildVC
+        default:
             return nil
         }
         
-        let previousIndex = viewControllerIndex - 1
-        
-        guard previousIndex >= 0 else {
-            pageIsOne = false
-            naviTitle()
-            return VCArr.last
-        }
-        guard VCArr.count > previousIndex else {
-            return nil
-        }
-        pageIsOne = true
-        naviTitle()
-        return VCArr[previousIndex]
-    }
-    
-    //다음화면 스와이프
-    public func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-        guard let viewControllerIndex = VCArr.index(of: viewController) else {
-            return nil
-        }
-        
-        let nextIndex = viewControllerIndex + 1
-        
-        guard nextIndex < VCArr.count else {
-            pageIsOne = true
-            naviTitle()
-            return VCArr.first
-        }
-        guard VCArr.count > nextIndex else {
-            return nil
-        }
-        pageIsOne = false
-        naviTitle()
-        return VCArr[nextIndex]
+        return vc
     }
     
     
     
-    //페이지 카운트
-    public func presentationCount(for pageViewController: UIPageViewController) -> Int {
-        return VCArr.count
-        
-    }
     
-    //인덱스
-    public func presentationIndex(for pageViewController: UIPageViewController) -> Int {
-        guard let firstViewController = viewControllers?.first,
-            let firstViewControllerIndex = VCArr.index(of: firstViewController) else{
-                return 0
-        }
-        return firstViewControllerIndex
-    }
-    
-    
-    //페이지뷰 하단의 경계 제거
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        for view in self.view.subviews {
-            if view is UIScrollView {
-                if view is UIScrollView {
-                    view.frame = UIScreen.main.bounds
-                } else if view is UIPageControl {
-                    view.backgroundColor = UIColor.clear
-                }
-            }
-        }
-    }
-    
-    
+   
     
     
     
 }
+
 

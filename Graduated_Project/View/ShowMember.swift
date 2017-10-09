@@ -22,6 +22,7 @@ class ShowMember: UICollectionViewController {
     
     
     override func viewDidLoad() {
+        
         Alamofire.request(URL_GET_MEMBER).responseJSON { (response) in
             switch response.result {
             case .success(let data):

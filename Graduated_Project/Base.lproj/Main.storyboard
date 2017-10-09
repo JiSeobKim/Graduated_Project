@@ -17,25 +17,49 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ro3-ni-JY9" customClass="CustomSegment" customModule="Graduated_Project" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="414" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Main"/>
+                                    <segment title="Log"/>
+                                </segments>
+                                <connections>
+                                    <action selector="switchTabs:" destination="BYZ-38-t0r" eventType="valueChanged" id="RrW-Ad-fMX"/>
+                                </connections>
+                            </segmentedControl>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kcj-QZ-VcZ">
+                                <rect key="frame" x="0.0" y="99" width="414" height="637"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="u1C-fO-cbQ">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="Group" id="faO-Lc-gxs">
+                            <color key="tintColor" red="0.97582715750000004" green="0.5304297805" blue="0.19023016100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <segue destination="vT6-c8-mNk" kind="show" id="GEv-lW-RUI"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="aXY-T1-xgs">
+                            <color key="tintColor" red="0.97582715750000004" green="0.5304297805" blue="0.19023016100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="Add:" destination="BYZ-38-t0r" id="b8x-8D-gt9"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="contentView" destination="Kcj-QZ-VcZ" id="wZU-vT-yTg"/>
+                        <outlet property="segmentedControl" destination="ro3-ni-JY9" id="SzB-Pe-yYg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="416.80000000000001" y="31.934032983508249"/>
+            <point key="canvasLocation" x="415.94202898550731" y="31.793478260869566"/>
         </scene>
         <!--구성원-->
         <scene sceneID="djX-lf-quy">
@@ -339,6 +363,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="보고서 작성" id="Jgv-cq-2kZ">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="J5p-81-kzK">
+                            <color key="tintColor" red="0.97582715750000004" green="0.5304297805" blue="0.19023016100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="saveBtn:" destination="2ef-CD-CYR" id="TK6-sF-ddm"/>
                             </connections>
@@ -512,6 +537,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="구성원 추가" id="jmY-FU-00o">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="gc8-l5-chh">
+                            <color key="tintColor" red="0.97582715750000004" green="0.5304297805" blue="0.19023016100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="buttonRegist:" destination="p7W-fW-sb5" id="W8N-4e-Kl5"/>
                             </connections>
@@ -621,6 +647,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="스터디 수정" id="axJ-Qg-WK2">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="T1K-c5-2AX">
+                            <color key="tintColor" red="0.97582715750000004" green="0.5304297805" blue="0.19023016100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="buttonRegist:" destination="ade-qy-Fgp" id="rj2-xW-2rs"/>
                             </connections>
@@ -776,4 +803,5 @@
         <image name="Group" width="32" height="32"/>
         <image name="member" width="256" height="256"/>
     </resources>
+    <color key="tintColor" red="0.97582715750000004" green="0.5304297805" blue="0.19023016100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
