@@ -18,6 +18,7 @@ let URL_GET_MEMBER = "http://222.107.27.68:5123/swift/graduate/get_Member.php"
 let URL_GET_STUDYINFO = "http://222.107.27.68:5123/swift/graduate/get_StudyInfo.php"
 let URL_GET_LOG = "http://222.107.27.68:5123/swift/graduate/get_Log.php"
 let URL_GET_LOG_DETAIL = "http://222.107.27.68:5123/swift/graduate/get_Log_Detail.php"
+let URL_GET_MAIN = "http://222.107.27.68:5123/swift/graduate/get_Main.php"
 
 
 //완료시 알림창
