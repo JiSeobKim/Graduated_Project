@@ -10,10 +10,11 @@ import Foundation
 import UIKit
 import Alamofire
 
-class ShowMember: UICollectionViewController {
+class ShowMember: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
     var memberObject : [MemberInfo] = []
     var nameArray : [String] = []
+    
     
     
     override func viewWillAppear(_ animated: Bool) {
@@ -52,10 +53,46 @@ class ShowMember: UICollectionViewController {
                 print("line:52")
             }
         } // end Alamofire
+        
+        let width = collectionView!.frame.width
+        let height = collectionView!.frame.height
+        
+        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        layout.itemSize = CGSize(width: width/3, height: height/5)
+        layout.minimumInteritemSpacing = 0
+        layout.minimumLineSpacing = 0
+        collectionView!.collectionViewLayout = layout
+        
+        
+        
     }
+
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//         // width & height are the same to make a square cell
+//    }
+    
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//
+//        let width = collectionView.frame.width
+//        let height = collectionView.frame.height
+//
+//        //6
+//        return CGSize(width: (width/3), height: (height/4))
+//
+//    }
+
+    
+        
+}
+    
+
     
     
     
+
+
+extension ShowMember {
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return memberObject.count
     }
