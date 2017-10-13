@@ -39,7 +39,7 @@ class DefineStudy: UIViewController {
     }
     
     override func viewDidLoad() {
-        addInputAccessoryForTextFields(textFields: [textFieldName, textFieldGoal, textFieldPeriod], dismissable: true, previousNextable: true)
+        addInputAccessoryForTextFields(textFields: [textFieldName, textFieldGoal, textFieldPeriod], dismissable: true, previousNextable: true, isTodayOn: true)
         
         
         //통신

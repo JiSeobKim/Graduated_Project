@@ -23,12 +23,15 @@ func downViewForKeyboard(how : CGFloat, VC:UIViewController) {
 
 extension UIViewController{
     
-    func addInputAccessoryForTextFields(textFields: [UITextField], dismissable: Bool = true, previousNextable: Bool = false) {
+    func addInputAccessoryForTextFields(textFields: [UITextField], dismissable: Bool = true, previousNextable: Bool = false, isTodayOn : Bool) {
+        
+        
         for (index, textField) in textFields.enumerated() {
             //툴바 사이즈 및 컬러
             let toolbar: UIToolbar = UIToolbar()
             toolbar.sizeToFit()
             toolbar.barStyle = UIBarStyle.default
+            toolbar.tintColor = UIColor(red: 245/255, green: 114/255, blue: 38/255, alpha: 0.5)
             
             //툴바에 넣을 아이템 배열
             var items = [UIBarButtonItem]()
@@ -68,7 +71,7 @@ extension UIViewController{
             //Today 버튼
             let todayButton = UIBarButtonItem(title: "Today", style: .plain, target: nil, action: nil)
             todayButton.width = 30
-            if textFields.count == 3, textField == textFields.last {
+            if isTodayOn, textField == textFields.last {
                 todayButton.action = #selector(self.datePickerTodayButton)
                 
             } else {

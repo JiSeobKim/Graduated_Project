@@ -13,7 +13,7 @@ struct MemberInfo : Codable {
     var name : String
     var email : String
     var phone : String
-    var coin : String
+    var date : String
 }
 
 

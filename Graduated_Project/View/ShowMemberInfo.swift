@@ -18,7 +18,7 @@ class ShowMemberInfo : UIViewController {
     @IBOutlet weak var labelName: UILabel!
     @IBOutlet weak var labelPhone: UILabel!
     @IBOutlet weak var labelEmail: UILabel!
-    @IBOutlet weak var labelCoin: UILabel!
+    @IBOutlet weak var labelDate: UILabel!
     
     
     override func viewDidLoad() {
@@ -27,7 +27,7 @@ class ShowMemberInfo : UIViewController {
             labelName.text = data.name
             labelPhone.text = data.phone
             labelEmail.text = data.email
-            labelCoin.text = data.coin
+            labelDate.text = data.date
         }
     }
     

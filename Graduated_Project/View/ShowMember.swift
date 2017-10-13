@@ -33,6 +33,7 @@ class ShowMember: UICollectionViewController, UICollectionViewDelegateFlowLayout
                 
                 for row in dataArray {
                     let objToDic = row as! NSDictionary
+                    print(objToDic)
                     
                     // NS -> JSON -> use decoadable -> append
                     do {

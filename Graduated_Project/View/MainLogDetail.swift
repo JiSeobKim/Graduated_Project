@@ -20,6 +20,7 @@ class MainLogDetail : UITableViewController {
         
         //get data from web
         if let data = getCommonData {
+            print(data.date)
             let param : Parameters = [
                 "date" : data.date
             ]
@@ -28,9 +29,10 @@ class MainLogDetail : UITableViewController {
                 switch response.result {
                 case .success(let data):
                     let dataArray = data as! NSArray
-                    
                     for row in dataArray {
                         do {
+                            let dataDic = row as! NSDictionary
+                            print(dataDic)
                             let dataJSON = try JSONSerialization.data(withJSONObject: row, options: .prettyPrinted)
                             
                             self.getArray.append(try JSONDecoder().decode(ToDoInfo.self, from: dataJSON))
