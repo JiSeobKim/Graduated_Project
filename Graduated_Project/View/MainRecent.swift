@@ -14,7 +14,12 @@ import Alamofire
 class MainRecent : UIViewController, ChartViewDelegate {
     
     @IBOutlet weak var barChartView: BarChartView!
+    
+    //표기
     @IBOutlet weak var choicedName: UILabel!
+    @IBOutlet weak var goalLabel: UILabel!
+    @IBOutlet weak var goalDateLabel: UILabel!
+    @IBOutlet weak var commonCount: UILabel!
     
     
     
@@ -22,11 +27,7 @@ class MainRecent : UIViewController, ChartViewDelegate {
         var memberName:[String] = []
         var memberCount:[Double] = []
         var common = "모인 횟수"
-        var commonCount = 0
-        var studyName = ""
-        var studyGoal = ""
         var studyDate = ""
-        
     }
     var mainData = MemberAndStudyInfo()
 
@@ -53,11 +54,12 @@ class MainRecent : UIViewController, ChartViewDelegate {
             case .success(let dataAny):
                 let dataDic = dataAny as! NSDictionary
                 
+                //Member Info
                 let dataMemberArray = dataDic["member"] as! NSArray
                 for row in dataMemberArray {
                     let dataMemberDic = row as! NSDictionary
                     if (dataMemberDic["name"] as! String == "Common"){
-                        self.mainData.commonCount = dataMemberDic["count"] as! Int
+                        self.commonCount.text = "\(dataMemberDic["count"] as! Int) 회"
                     } else {
                         self.mainData.memberName.append(dataMemberDic["name"] as! String)
                         self.mainData.memberCount.append(dataMemberDic["count"] as! Double)
@@ -69,6 +71,13 @@ class MainRecent : UIViewController, ChartViewDelegate {
                     }
                 }
                 
+                let dataStudyArray = dataDic["study"] as! NSArray
+                let dataStudyDic = dataStudyArray[0] as! NSDictionary
+                
+                //Insert
+                self.goalLabel.text = dataStudyDic["goal"] as? String
+                self.mainData.studyDate = dataStudyDic["period"] as! String
+                self.goalDateLabel.text = dataStudyDic["period"] as? String
             case .failure(let e):
                 print(e.localizedDescription)
             }

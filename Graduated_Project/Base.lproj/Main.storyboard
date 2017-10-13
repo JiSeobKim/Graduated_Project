@@ -903,6 +903,9 @@
                     <connections>
                         <outlet property="barChartView" destination="URB-Ys-U2K" id="Exh-JT-x5J"/>
                         <outlet property="choicedName" destination="AeM-dd-mnn" id="Mi6-sc-BI7"/>
+                        <outlet property="commonCount" destination="Fqm-KD-k41" id="p2E-dc-DDO"/>
+                        <outlet property="goalDateLabel" destination="OR0-Xb-aLU" id="L71-JC-wWI"/>
+                        <outlet property="goalLabel" destination="aCa-5R-tmI" id="Qdo-bq-V6S"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XVL-nD-7bt" userLabel="First Responder" sceneMemberID="firstResponder"/>
