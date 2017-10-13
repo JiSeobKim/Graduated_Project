@@ -121,7 +121,9 @@ class MainRecent : UIViewController, ChartViewDelegate {
         //y축
         barChartView.leftAxis.granularityEnabled = true
         barChartView.leftAxis.granularity = 1.0
-        barChartView.leftAxis.labelTextColor = UIColor.darkGray
+        barChartView.leftAxis.labelTextColor = UIColor.lightGray
+        barChartView.leftAxis.gridColor = UIColor(red: 254/255, green: 214/255, blue: 84/255, alpha: 1)
+        
         
         
         
