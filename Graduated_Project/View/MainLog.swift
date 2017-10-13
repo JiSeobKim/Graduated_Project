@@ -15,7 +15,6 @@ class MainLog : UITableViewController {
     
     var dataArray = [ToDoInfo]()
 
-    
     override func viewWillAppear(_ animated: Bool) {
         dataArray = []
         Alamofire.request(URL_GET_LOG).responseJSON { (response) in
@@ -67,6 +66,17 @@ class MainLog : UITableViewController {
     
     
     
+    
+    
+    
+    
+//LogDetail
+    
+    
+
+}
+
+extension MainLog {
     
     
 //LogDetail

@@ -728,6 +728,7 @@
                                                 <userDefinedRuntimeAttribute type="boolean" keyPath="materialDesign" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                         </view>
+
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="eKQ-Nn-tyc" firstAttribute="top" secondItem="3eb-Pj-g75" secondAttribute="top" constant="8" id="J2G-qb-Fae"/>
@@ -774,6 +775,7 @@
                         </view>
                         <view key="tableFooterView" contentMode="scaleToFill" id="dID-uZ-6BR">
                             <rect key="frame" x="0.0" y="156" width="414" height="44"/>
+
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
