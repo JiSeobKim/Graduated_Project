@@ -17,11 +17,7 @@ class MainLog : UITableViewController {
 
     
     override func viewWillAppear(_ animated: Bool) {
-        tableView.reloadData()
-    }
-    
-    override func viewDidLoad() {
-        
+        dataArray = []
         Alamofire.request(URL_GET_LOG).responseJSON { (response) in
             switch response.result {
             case .success(let obj) :
@@ -44,6 +40,11 @@ class MainLog : UITableViewController {
                 print(error.localizedDescription)
             }
         }
+    }
+    
+    override func viewDidLoad() {
+        
+       
         
         
     }

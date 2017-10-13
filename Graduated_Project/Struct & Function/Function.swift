@@ -69,6 +69,25 @@ func postAlamofire(URL : String, params:Parameters, VC : UIViewController) {
 private var materialKey = false
 private var labelShadow = false
 
+extension UILabel{
+    func underBarColor(){
+        self.backgroundColor = UIColor(red: 171, green: 178, blue: 186, alpha: 1.0)
+        //검정 그림자
+        //                self.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
+        //주황
+        self.layer.shadowColor = UIColor(red: 251/255, green: 214/255, blue: 194/255, alpha: 1).cgColor
+        //노랑
+        //        label.layer.shadowColor = UIColor(red: 241/255, green: 203/255, blue: 63/255, alpha: 0.25).cgColor
+        self.layer.shadowOffset = CGSize(width: 0, height: 2)
+        self.layer.shadowOpacity = 0.8
+        self.layer.shadowRadius = 0.2
+        self.layer.masksToBounds = false
+        self.layer.cornerRadius = 4.0
+        
+    }
+    
+}
+
 extension UIView {
     
     @IBInspectable var materialDesign: Bool {
@@ -119,7 +138,7 @@ extension UIView {
                 //주황
 //                self.layer.shadowColor = UIColor(red: 245/255, green: 114/255, blue: 38/255, alpha: 0.25).cgColor
                 //노랑
-                self.layer.shadowColor = UIColor(red: 241/255, green: 203/255, blue: 63/255, alpha: 0.25).cgColor
+                self.layer.shadowColor = UIColor(red: 241/255, green: 203/255, blue: 63/255, alpha: 0.5).cgColor
                 self.layer.shadowOffset = CGSize(width: 0, height: 2)
                 self.layer.shadowOpacity = 1.0
                 self.layer.shadowRadius = 0.0
@@ -130,6 +149,8 @@ extension UIView {
             }
         }
     }
+    
+    
 }
 
 

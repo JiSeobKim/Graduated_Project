@@ -20,6 +20,7 @@ class MainRecent : UIViewController, ChartViewDelegate {
     @IBOutlet weak var goalLabel: UILabel!
     @IBOutlet weak var goalDateLabel: UILabel!
     @IBOutlet weak var commonCount: UILabel!
+    @IBOutlet weak var dDayLabel: UILabel!
     
     
     
@@ -35,6 +36,7 @@ class MainRecent : UIViewController, ChartViewDelegate {
     override func viewDidLoad() {
         barChartView.delegate = self
         choicedName.textColor = UIColor.lightGray
+        dDayLabel.underBarColor()
         
     }
     func chartValueSelected(_ chartView: ChartViewBase, entry: ChartDataEntry, highlight: Highlight) {
@@ -146,6 +148,8 @@ class MainRecent : UIViewController, ChartViewDelegate {
        
         
     }
+    
+    
 }
 
 
