@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import UIKit
 
 struct MemberInfo : Codable {
     var name : String

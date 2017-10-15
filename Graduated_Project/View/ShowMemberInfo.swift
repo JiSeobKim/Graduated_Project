@@ -8,11 +8,12 @@
 
 import Foundation
 import UIKit
-
+import Alamofire
 
 class ShowMemberInfo : UIViewController {
     
     var getValue : MemberInfo?
+    var memberImage : UIImage?
     
     
     @IBOutlet weak var labelName: UILabel!
@@ -20,6 +21,9 @@ class ShowMemberInfo : UIViewController {
     @IBOutlet weak var labelEmail: UILabel!
     @IBOutlet weak var labelDate: UILabel!
     
+    @IBOutlet weak var photoLabel: UIImageView!
+    
+    var plist = UserDefaults.standard
     
     override func viewDidLoad() {
         
@@ -29,6 +33,17 @@ class ShowMemberInfo : UIViewController {
             labelEmail.text = data.email
             labelDate.text = data.date
         }
+        
+      
     }
+    
+    @IBAction func deleteBtn(_ sender: Any) {
+        let params : Parameters = [
+            "name" : labelName.text!
+        ]
+        postAlamofire(URL: URL_DELETE, params: params, VC: self)
+    }
+    
+    
     
 }

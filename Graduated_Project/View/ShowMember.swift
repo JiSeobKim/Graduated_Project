@@ -14,16 +14,11 @@ class ShowMember: UICollectionViewController, UICollectionViewDelegateFlowLayout
     
     var memberObject : [MemberInfo] = []
     var nameArray : [String] = []
+    var memberImage : Any?
     
     
     
     override func viewWillAppear(_ animated: Bool) {
-        collectionView?.reloadData()
-    }
-    
-    
-    override func viewDidLoad() {
-        
         Alamofire.request(URL_GET_MEMBER).responseJSON { (response) in
             switch response.result {
             case .success(let data):
@@ -33,7 +28,7 @@ class ShowMember: UICollectionViewController, UICollectionViewDelegateFlowLayout
                 
                 for row in dataArray {
                     let objToDic = row as! NSDictionary
-                    print(objToDic)
+                    
                     
                     // NS -> JSON -> use decoadable -> append
                     do {
@@ -54,6 +49,17 @@ class ShowMember: UICollectionViewController, UICollectionViewDelegateFlowLayout
                 print("line:52")
             }
         } // end Alamofire
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        memberObject = []
+        nameArray = []
+    }
+    
+    
+    override func viewDidLoad() {
+        
+        
         
         let width = collectionView!.frame.width
         let height = collectionView!.frame.height
@@ -101,6 +107,7 @@ extension ShowMember {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MemberCell", for: indexPath) as! ShowMemberCell
         cell.nameLabel.text = memberObject[indexPath.row].name
+    
         
         
         return cell
@@ -122,6 +129,8 @@ extension ShowMember {
             if let destination = segue.destination as? ShowMemberInfo{
                 if let memberStr = sender as? MemberInfo{
                     destination.getValue = memberStr
+                    
+                
                 }
             }
         }

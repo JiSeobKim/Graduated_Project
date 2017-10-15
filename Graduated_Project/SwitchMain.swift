@@ -27,6 +27,7 @@ class SwitchMain: UIViewController {
         displayCurrentTab(TabIndex.firstChildTab.rawValue)
 
         self.navigationItem.title = "최근 현황"
+        
 
     }
     
@@ -65,6 +66,7 @@ class SwitchMain: UIViewController {
         alert.addAction(addReport)
         alert.addAction(addMember)
         alert.addAction(cancel)
+        alert.view.tintColor = UIColor(red: 251/255, green: 117/255, blue: 39/255, alpha: 1)
         
         self.present(alert, animated:true)
         
