@@ -16,7 +16,7 @@ func upViewForKeyboard(how : CGFloat, VC:UIViewController) {
 }
 
 func downViewForKeyboard(how : CGFloat, VC:UIViewController) {
-    UIView.animate(withDuration: 0.25, animations: {
+    UIView.animate(withDuration: 0.15, animations: {
         VC.view.frame.origin.y += how
     }, completion: nil)
 }

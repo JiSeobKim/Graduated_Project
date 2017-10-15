@@ -14,7 +14,6 @@ class ShowMember: UICollectionViewController, UICollectionViewDelegateFlowLayout
     
     var memberObject : [MemberInfo] = []
     var nameArray : [String] = []
-    var memberImage : Any?
     
     
     
@@ -66,7 +65,7 @@ class ShowMember: UICollectionViewController, UICollectionViewDelegateFlowLayout
         
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-        layout.itemSize = CGSize(width: width/3, height: height/5)
+        layout.itemSize = CGSize(width: width/3, height: height/10)
         layout.minimumInteritemSpacing = 0
         layout.minimumLineSpacing = 0
         collectionView!.collectionViewLayout = layout
