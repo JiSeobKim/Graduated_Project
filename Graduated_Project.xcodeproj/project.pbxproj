@@ -12,6 +12,8 @@
 		A01B405B1F7A762000C5F029 /* AddMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01B405A1F7A762000C5F029 /* AddMember.swift */; };
 		A01B405D1F7A762700C5F029 /* DefineStudy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01B405C1F7A762700C5F029 /* DefineStudy.swift */; };
 		A069404A1F87733B00E2FC3B /* KeyBoard_Tool.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06940491F87733B00E2FC3B /* KeyBoard_Tool.swift */; };
+		A06ABAF71F974FAA00C6AF29 /* AddView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A06ABAF61F974FAA00C6AF29 /* AddView.storyboard */; };
+		A06ABAF91F974FCD00C6AF29 /* MainView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A06ABAF81F974FCD00C6AF29 /* MainView.storyboard */; };
 		A08947591F8B2BDB00B06A3D /* CustomSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08947581F8B2BDB00B06A3D /* CustomSegment.swift */; };
 		A0ADA37F1F8A3A6300050C6E /* MainLogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0ADA37E1F8A3A6300050C6E /* MainLogCell.swift */; };
 		A0ADA3811F8A6CA400050C6E /* MainLogDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0ADA3801F8A6CA400050C6E /* MainLogDetail.swift */; };
@@ -37,6 +39,8 @@
 		A01B405A1F7A762000C5F029 /* AddMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMember.swift; sourceTree = "<group>"; };
 		A01B405C1F7A762700C5F029 /* DefineStudy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefineStudy.swift; sourceTree = "<group>"; };
 		A06940491F87733B00E2FC3B /* KeyBoard_Tool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyBoard_Tool.swift; sourceTree = "<group>"; };
+		A06ABAF61F974FAA00C6AF29 /* AddView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddView.storyboard; sourceTree = "<group>"; };
+		A06ABAF81F974FCD00C6AF29 /* MainView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainView.storyboard; sourceTree = "<group>"; };
 		A08947581F8B2BDB00B06A3D /* CustomSegment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegment.swift; sourceTree = "<group>"; };
 		A0ADA37E1F8A3A6300050C6E /* MainLogCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainLogCell.swift; sourceTree = "<group>"; };
 		A0ADA3801F8A6CA400050C6E /* MainLogDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainLogDetail.swift; sourceTree = "<group>"; };
@@ -111,6 +115,8 @@
 				A0D9E3FF1F7A4D51000C7208 /* SwitchMain.swift */,
 				A08947581F8B2BDB00B06A3D /* CustomSegment.swift */,
 				A0D9E4011F7A4D51000C7208 /* Main.storyboard */,
+				A06ABAF81F974FCD00C6AF29 /* MainView.storyboard */,
+				A06ABAF61F974FAA00C6AF29 /* AddView.storyboard */,
 				A0D9E4071F7A4D51000C7208 /* Assets.xcassets */,
 				A0D9E4091F7A4D51000C7208 /* LaunchScreen.storyboard */,
 				A0D9E40C1F7A4D51000C7208 /* Info.plist */,
@@ -223,6 +229,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0D9E40B1F7A4D51000C7208 /* LaunchScreen.storyboard in Resources */,
+				A06ABAF71F974FAA00C6AF29 /* AddView.storyboard in Resources */,
+				A06ABAF91F974FCD00C6AF29 /* MainView.storyboard in Resources */,
 				A0D9E4081F7A4D51000C7208 /* Assets.xcassets in Resources */,
 				A0D9E4031F7A4D51000C7208 /* Main.storyboard in Resources */,
 			);
