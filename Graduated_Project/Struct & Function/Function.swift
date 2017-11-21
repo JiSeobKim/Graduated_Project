@@ -39,13 +39,7 @@ func alertDalay(viewControl : UIViewController, message : String ){
         alert.dismiss(animated: true, completion: {
             viewControl.navigationController?.popViewController(animated: true)
         })
-        
-        
     }
-    
-    
-    
-    
 }
 
 func postAlamofire(URL : String, params:Parameters, VC : UIViewController) {
@@ -60,7 +54,7 @@ func postAlamofire(URL : String, params:Parameters, VC : UIViewController) {
             
         case .failure(let e):
             print(e.localizedDescription)
-            print("Here")
+            print("Here Function.Swift Line: 63 ")
             
         }
     }

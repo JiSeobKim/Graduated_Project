@@ -12,7 +12,6 @@ import UIKit
 class AddReportCommonCell : UITableViewCell {
     @IBOutlet weak var commonTextField: UITextField!
     @IBOutlet weak var coinSubAll: UISwitch!
-    
 }
 
 
@@ -20,10 +19,4 @@ class AddReportPersonalCell : UITableViewCell {
     @IBOutlet weak var personalTextField: UITextField!
     @IBOutlet weak var coinSubPersonal: UISwitch!
     @IBOutlet weak var name: UILabel!
-
-   
-    
-  
-    
-    
 }

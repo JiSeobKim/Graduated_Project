@@ -126,18 +126,12 @@ class MainRecent : UIViewController, ChartViewDelegate {
         barChartView.leftAxis.labelTextColor = UIColor.lightGray
         barChartView.leftAxis.gridColor = UIColor(red: 254/255, green: 214/255, blue: 84/255, alpha: 1)
         
-        
-        
-        
-        
         //Grid Line
 //        barChartView.leftAxis.drawGridLinesEnabled = false
         barChartView.leftAxis.drawAxisLineEnabled = false
         barChartView.rightAxis.enabled = false
         
 
-        
-        
         //기타
         barChartView.legend.textColor = UIColor.lightGray
         barChartView.chartDescription?.text = ""
@@ -145,10 +139,7 @@ class MainRecent : UIViewController, ChartViewDelegate {
         barChartView.notifyDataSetChanged()
         
         dataSet.drawValuesEnabled = false
-       
-        
     }
-    
     
 }
 

@@ -14,10 +14,8 @@ class AddReport: UITableViewController, UITextFieldDelegate {
     var nameArray : [String] = ["Common"]
 //for 일반
 
-    
     var nameData = [String]()
     var textData = [String]()
-    
 
     //Save 버튼
     @IBAction func saveBtn(_ sender: Any) {
@@ -34,8 +32,7 @@ class AddReport: UITableViewController, UITextFieldDelegate {
                 "text" : textData
             ]
             postAlamofire(URL: URL_REPORT_REGISTER, params: params, VC: self)
-
-            
+        
         }
         
     }
@@ -47,10 +44,6 @@ class AddReport: UITableViewController, UITextFieldDelegate {
             textData.append(textField.text!)
         }
     }
-    
-   
-    
-    
 
     //값 불러오기
     override func viewDidLoad() {
@@ -65,11 +58,8 @@ class AddReport: UITableViewController, UITextFieldDelegate {
                     self.nameArray.append(nameDic["name"] as! String)
 
                 }
-
                 //reload tableView Cell
                 self.tableView.reloadData()
-
-
             case .failure(let e):
                 print(e.localizedDescription)
             }
@@ -78,10 +68,6 @@ class AddReport: UITableViewController, UITextFieldDelegate {
         
         
     }
-    
-    
-    
-    
     
 }
 
@@ -108,8 +94,6 @@ extension AddReport {
             return cell
         }
     }
-    
-    
     
 }
 

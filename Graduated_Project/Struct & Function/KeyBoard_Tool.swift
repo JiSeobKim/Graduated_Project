@@ -59,9 +59,6 @@ extension UIViewController{
                     nextButton.action = #selector(UITextField.becomeFirstResponder)
                 }
                 
-                
-                
-                
                 //툴바에 쓸 아이템 추가
                 if textFields.count != 1{
                     items.append(contentsOf: [previousButton, nextButton])
@@ -95,7 +92,6 @@ extension UIViewController{
         
     }
     
-   
     @objc func datePickerTodayButton(_ a : UIBarButtonItem) {
         let vc = self as? DefineStudy
         let todaysDate = Date()
@@ -104,6 +100,4 @@ extension UIViewController{
         vc?.textFieldPeriod.text = dateFormatter.string(from: todaysDate)
         self.view.endEditing(true)
     }
-    
-  
 }

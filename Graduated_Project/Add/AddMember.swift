@@ -13,16 +13,10 @@ import Alamofire
 
 
 class AddMember: UIViewController {
-    
-    
     //View variables
     @IBOutlet weak var textFieldName: UITextField!
     @IBOutlet weak var textFieldEmail: UITextField!
     @IBOutlet weak var textFieldPhone: UITextField!
-    
-
-    
-    
     
     override func viewDidLoad() {
         addInputAccessoryForTextFields(textFields: [textFieldName, textFieldPhone, textFieldEmail ], dismissable: true, previousNextable: true, isTodayOn: false)
@@ -40,10 +34,7 @@ class AddMember: UIViewController {
     }
     
     
-    
     @IBAction func buttonRegist(_ sender: Any) {
-        
-
         //creating parameters for the post request
         let parameters: Parameters=[
             "name":textFieldName.text!,
@@ -55,8 +46,5 @@ class AddMember: UIViewController {
         postAlamofire(URL: URL_USER_STUDY_REGISTER, params: parameters, VC: self)
         
     }
-
-   
-   
-    
+ 
 }

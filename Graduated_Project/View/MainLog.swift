@@ -41,12 +41,7 @@ class MainLog : UITableViewController {
         }
     }
     
-    override func viewDidLoad() {
-        
-       
-        
-        
-    }
+    
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let item = dataArray[indexPath.row]
@@ -63,28 +58,8 @@ class MainLog : UITableViewController {
             }
         }
     }
-    
-    
-    
-    
-    
-    
-    
-//LogDetail
-    
-    
-
+ 
 }
-
-extension MainLog {
-    
-    
-//LogDetail
-    
-    
-
-}
-
 extension MainLog {
     
     

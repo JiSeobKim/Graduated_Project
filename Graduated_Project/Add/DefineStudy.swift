@@ -90,7 +90,5 @@ class DefineStudy: UIViewController {
         textFieldPeriod.text = dateFormatter.string(from: sender.date)
     }
     
-    
-    
 }
 
