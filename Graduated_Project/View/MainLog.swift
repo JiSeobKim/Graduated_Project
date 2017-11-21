@@ -12,7 +12,6 @@ import Alamofire
 
 class MainLog : UITableViewController {
     
-    
     var dataArray = [ToDoInfo]()
 
     override func viewWillAppear(_ animated: Bool) {
@@ -32,7 +31,6 @@ class MainLog : UITableViewController {
                         print(error.localizedDescription)
                     }
                 }
-                
                 
                 self.tableView.reloadData()
             case . failure(let error):
@@ -54,14 +52,12 @@ class MainLog : UITableViewController {
                 if let data = sender as? ToDoInfo{
                     destination.getCommonData = data
                 }
-                
             }
         }
     }
  
 }
 extension MainLog {
-    
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataArray.count

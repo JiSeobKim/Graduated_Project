@@ -73,7 +73,6 @@ class MainLogDetail : UITableViewController {
             
         }
         
-        
         return cell
     }
 

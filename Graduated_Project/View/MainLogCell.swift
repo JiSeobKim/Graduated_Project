@@ -10,17 +10,12 @@ import Foundation
 import UIKit
 
 class MainLogCell : UITableViewCell {
-    
-    
     @IBOutlet weak var labelDescription: UILabel!
     @IBOutlet weak var labelDate: UILabel!
-    
-    
 }
 
 
 class MainLogDetailCell : UITableViewCell {
     @IBOutlet weak var labelName: UILabel!
     @IBOutlet weak var labelDescription: UILabel!
-    
 }

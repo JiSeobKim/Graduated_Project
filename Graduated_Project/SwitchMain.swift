@@ -27,11 +27,7 @@ class SwitchMain: UIViewController {
         displayCurrentTab(TabIndex.firstChildTab.rawValue)
 
         self.navigationItem.title = "최근 현황"
-        
-
     }
-    
-    
     
     //Add 버튼 VC 연결
     @IBAction func Add(_ sender: UIBarButtonItem) {
@@ -57,9 +53,7 @@ class SwitchMain: UIViewController {
                 self.navigationController?.pushViewController(goMember, animated: true)
             }
         }
-        
-        
-        
+      
         let cancel = UIAlertAction(title: "취소", style: .cancel)
         
         alert.addAction(addMaster)
@@ -131,13 +125,6 @@ class SwitchMain: UIViewController {
         
         return vc
     }
-    
-    
-    
-    
-   
-    
-    
     
 }
 

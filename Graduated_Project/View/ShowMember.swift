@@ -74,29 +74,7 @@ class ShowMember: UICollectionViewController, UICollectionViewDelegateFlowLayout
         
     }
 
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//         // width & height are the same to make a square cell
-//    }
-    
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//
-//        let width = collectionView.frame.width
-//        let height = collectionView.frame.height
-//
-//        //6
-//        return CGSize(width: (width/3), height: (height/4))
-//
-//    }
-
-    
-        
 }
-    
-
-    
-    
-    
-
 
 extension ShowMember {
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -106,21 +84,14 @@ extension ShowMember {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MemberCell", for: indexPath) as! ShowMemberCell
         cell.nameLabel.text = memberObject[indexPath.row].name
-    
-        
         
         return cell
     }
     
-    
-    
-    
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let item = memberObject[indexPath.row]
         performSegue(withIdentifier: "MemberInfo", sender: item)
-        
-        
-        
+ 
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -128,12 +99,9 @@ extension ShowMember {
             if let destination = segue.destination as? ShowMemberInfo{
                 if let memberStr = sender as? MemberInfo{
                     destination.getValue = memberStr
-                    
-                
+  
                 }
             }
         }
     }
-    
-    
 }

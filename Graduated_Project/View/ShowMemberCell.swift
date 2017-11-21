@@ -11,8 +11,5 @@ import UIKit
 import Alamofire
 
 class ShowMemberCell : UICollectionViewCell {
-    
     @IBOutlet weak var nameLabel: UILabel!
-    
-    
 }

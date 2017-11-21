@@ -33,7 +33,6 @@ class ShowMemberInfo : UIViewController {
             labelEmail.text = data.email
             labelDate.text = data.date
         }
-        
       
     }
     
@@ -43,7 +42,5 @@ class ShowMemberInfo : UIViewController {
         ]
         postAlamofire(URL: URL_DELETE, params: params, VC: self)
     }
-    
-    
     
 }
